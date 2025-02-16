@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHINAZES GAME</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body bgcolor="black">
+    <header class="header">   
+        <nav style="height: 50px;">
+            <table style="margin-left: 20px;">
+                <tr>
+                    <td>
+                        <a href="index2.html"><img src="photo/df33eb82-cbcb-42ec-acb1-7cd0f815cca9-transformed.png" width="150vw" alt="logo"></a>
+                    </td>
+                    <td>        
+                    <h1 style="margin-left: 50px;">
+                        Пополнение счета
+                    </h1>
+                    <br>
+                    <span style="margin-left: 50px;" id="nik"></span>
+                    <span>Текущий баланс:</span><span id="balance"></span>
+                </td>
+                </tr>
+            </table>
+                
+            </nav>
+        </header>
+    <br>
+    <form action="#" method="post" style="text-align: center; align-items: center; justify-content: center;" name="form" id="form">
+        <label for="sum">Сумма пополнения</label>
+        <br>
+        <input type="number" id="sum" name="sum" placeholder="Введите сумму">
+        <br>
+        <label for="number">Номер карты</label>
+        <br>
+        <input type="number" id="number" name="number" placeholder="Номер карты" >
+        <br>
+        <label for="mec">Месяц/Год</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <label for="cvv">CVV</label>
+        <br>
+        <input type="number" id="mec" name="mec" placeholder="Месяц" style="width: 5%;">
+        <input type="number" id="god" name="god" placeholder="Год" style="width: 5%;">
+        
+        <input type="number" id="cvv" name="cvv" placeholder="CVV" style="width: 5%;">
+        <br>
+        <label for="email">E-mail</label>
+        <br>
+        <input type="email" id="email" name="email" placeholder="example@mail.ru">
+        <br>
+        <input type="submit" id="submit" value="Пополнить счет">
+    </form>
+    <center>
+        <a href="index2.html"><button class="cancel" style="margin-top: 10px;">На главную</button></a>
+    </center>
+    <script src="java1.js"></script>
+    <script>
+        const userElement = document.querySelector('#nik');
+        const balanceElement = document.querySelector('#balance');
+        if (user){
+            balanceElement.innerHTML = user.balance;
+            userElement.innerHTML = user.nik;
+        } else {
+            goHome();
+        }
+
+        logoutElement.addEventListener('click', () => {
+            localStorage.removeItem('main');
+            goHome();
+        })
+    </script>
+</body>
+
+</html>

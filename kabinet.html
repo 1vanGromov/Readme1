@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CHINAZES GAME</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body bgcolor="black">
+    <header class="header">   
+        <nav style="height: 50px;">
+            <table style="margin-left: 20px;">
+                <tr>
+                    <td>
+                        <a href="index2.html"><img src="photo/df33eb82-cbcb-42ec-acb1-7cd0f815cca9-transformed.png" width="150vw" alt="logo"></a>
+                    </td>
+                    <td>        
+                    <h1 style="margin-left: 50px;">
+                        Личный кабинет
+                    </h1>
+                    <br>
+                    <span style="margin-left: 50px;" id="nik"></span>
+                </td>
+                </tr>
+            </table>
+                
+            </nav>
+        </header>
+        <div class="cube">
+            <br>
+        </div>
+        <br>
+        <div class = kabinet-info style="align-items: center;">
+            <div style="width: 780px;">
+                <img src="photo/fee55c82-039d-4749-af3b-e88b24065c9a.jpg">
+            </div>
+            
+            <div style="width: 1000px; margin-left: 20px;">
+                <h1>
+                    Забронировать место
+                </h1>
+                <span>Здесь вы можете забронировать место для игры или работы за компьютером. Просто выберите удобное для вас время и дату, заполните необходимые данные, и ваше место будет забронировано. Мы предлагаем удобные рабочие места, быстрый интернет, широкий выбор игр и дружелюбную атмосферу. Начните бронирование прямо сейчас и готовьтесь к незабываемому опыту в нашем компьютерном клубе!</span>
+                    <br>
+                    <span>Что бы забронировать место вы можете позвонить оператору компьютерного клуба по номеру - 86648825272</span>
+                    <br><br>
+                    <span>Или написать сообщение в одной из соц. сетей ниже</span>
+                    <br><br>
+                    <div class="kabinet-info" style="align-items: center;">
+                        <div>
+                            <a href="https://vk.com/feed"><img src="photo/icons8-vk-50.png"></a>
+                        </div>
+                        <div>
+                            <a href="https://web.telegram.org/a/"><img src="photo/icons8-whatsapp-50.png" style="margin-left: 20px;"></a>
+                        </div>
+                        <div>
+                            <a href="https://www.whatsapp.com/?lang=ru_RU"><img src="photo/icons8-телеграм-50.png" style="margin-left: 20px;"></a>
+                        </div>
+                    </div>   
+            </div>
+        </div>
+              
+        </div>
+        <script src="java1.js"></script>
+        <script>
+            const userElement = document.querySelector('#nik');
+            if (user){
+                userElement.innerHTML = user.nik;
+            } else {
+                goHome();
+            }
+    
+            logoutElement.addEventListener('click', () => {
+                localStorage.removeItem('main');
+                goHome();
+            })
+    
+            function goHome(){
+                window.location = 'Untitled-1.html';
+            }
+        </script>
+</body>
+</html>
